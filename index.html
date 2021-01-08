@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="generator" content="Asciidoctor 2.0.12">
 <meta name="keywords" content="Zalando, Guidelines, RESTful, API, Events, Schema">
 <meta name="copyright" content="CC-BY-SA 4.0">
 <title>Zalando RESTful API and Event Scheme Guidelines</title>
@@ -1292,6 +1292,95 @@ a > code { background-color: #f0f0f0; padding: .1em .4em .1em .4em !important; f
 #toc a { color: #364149; }
 
 </style>
+<style>
+/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+pre.CodeRay{background:#f7f7f8}
+.CodeRay .line-numbers{border-right:1px solid currentColor;opacity:.35;padding:0 .5em 0 0}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.75em}
+.CodeRay .line-numbers strong{color:#000}
+table.CodeRay{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.CodeRay td{vertical-align:top;line-height:inherit}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.code{padding:0 0 0 .75em}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}
+</style>
 </head>
 <body class="article">
 <div id="header">
@@ -1315,20 +1404,21 @@ a > code { background-color: #f0f0f0; padding: .1em .4em .1em .4em !important; f
 <div id="toctitle" class="title">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_zalando_restful_api_and_event_scheme_guidelines">Zalando RESTful API and Event Scheme Guidelines</a></li>
-<li><a href="#introduction">1. Introduction</a>
+<li><a href="#introduction">1. THIS IS ONLY FOR GITHUB ACTIONS TEST 1</a></li>
+<li><a href="#_introduction">2. Introduction</a>
 <ul class="sectlevel2">
 <li><a href="#conventions-used-in-these-guidelines">Conventions used in these guidelines</a></li>
 <li><a href="#zalando-specific-information">Zalando specific information</a></li>
 </ul>
 </li>
-<li><a href="#principles">2. Principles</a>
+<li><a href="#principles">3. Principles</a>
 <ul class="sectlevel2">
 <li><a href="#api-design-principles">API design principles</a></li>
 <li><a href="#api-as-a-product">API as a product</a></li>
 <li><a href="#api-first">API first</a></li>
 </ul>
 </li>
-<li><a href="#general-guidelines">3. General guidelines</a>
+<li><a href="#general-guidelines">4. General guidelines</a>
 <ul class="sectlevel2">
 <li><a href="#100"><span class="must-keyword"><strong>MUST</strong></span> follow API first principle</a></li>
 <li><a href="#101"><span class="must-keyword"><strong>MUST</strong></span> provide API specification using Open API</a></li>
@@ -1337,7 +1427,7 @@ a > code { background-color: #f0f0f0; padding: .1em .4em .1em .4em !important; f
 <li><a href="#103"><span class="must-keyword"><strong>MUST</strong></span> write APIs using U.S. English</a></li>
 </ul>
 </li>
-<li><a href="#meta-information">4. Meta information</a>
+<li><a href="#meta-information">5. Meta information</a>
 <ul class="sectlevel2">
 <li><a href="#218"><span class="must-keyword"><strong>MUST</strong></span> contain API meta information</a></li>
 <li><a href="#116"><span class="must-keyword"><strong>MUST</strong></span> use semantic versioning</a></li>
@@ -1345,14 +1435,14 @@ a > code { background-color: #f0f0f0; padding: .1em .4em .1em .4em !important; f
 <li><a href="#219"><span class="must-keyword"><strong>MUST</strong></span> provide API audience</a></li>
 </ul>
 </li>
-<li><a href="#security">5. Security</a>
+<li><a href="#security">6. Security</a>
 <ul class="sectlevel2">
 <li><a href="#104"><span class="must-keyword"><strong>MUST</strong></span> secure endpoints with OAuth 2.0</a></li>
 <li><a href="#105"><span class="must-keyword"><strong>MUST</strong></span> define and assign permissions (scopes)</a></li>
 <li><a href="#225"><span class="must-keyword"><strong>MUST</strong></span> follow naming convention for permissions (scopes)</a></li>
 </ul>
 </li>
-<li><a href="#compatibility">6. Compatibility</a>
+<li><a href="#compatibility">7. Compatibility</a>
 <ul class="sectlevel2">
 <li><a href="#106"><span class="must-keyword"><strong>MUST</strong></span> not break backward compatibility</a></li>
 <li><a href="#107"><span class="should-keyword"><strong>SHOULD</strong></span> prefer compatible extensions</a></li>
@@ -1366,7 +1456,7 @@ a > code { background-color: #f0f0f0; padding: .1em .4em .1em .4em !important; f
 <li><a href="#115"><span class="must-keyword"><strong>MUST</strong></span> not use URI versioning</a></li>
 </ul>
 </li>
-<li><a href="#deprecation">7. Deprecation</a>
+<li><a href="#deprecation">8. Deprecation</a>
 <ul class="sectlevel2">
 <li><a href="#185"><span class="must-keyword"><strong>MUST</strong></span> obtain approval of clients before API shut down</a></li>
 <li><a href="#186"><span class="must-keyword"><strong>MUST</strong></span> collect external partner consent on deprecation time span</a></li>
@@ -1377,7 +1467,7 @@ a > code { background-color: #f0f0f0; padding: .1em .4em .1em .4em !important; f
 <li><a href="#191"><span class="must-keyword"><strong>MUST</strong></span> not start using deprecated APIs</a></li>
 </ul>
 </li>
-<li><a href="#json-guidelines">8. JSON guidelines</a>
+<li><a href="#json-guidelines">9. JSON guidelines</a>
 <ul class="sectlevel2">
 <li><a href="#118"><span class="must-keyword"><strong>MUST</strong></span> property names must be ASCII snake_case (and never camelCase): <code>^[a-z_][a-z_0-9]*$</code></a></li>
 <li><a href="#125"><span class="should-keyword"><strong>SHOULD</strong></span> represent enumerations as strings</a></li>
@@ -1392,7 +1482,7 @@ a > code { background-color: #f0f0f0; padding: .1em .4em .1em .4em !important; f
 <li><a href="#127"><span class="should-keyword"><strong>SHOULD</strong></span> define time durations and intervals properties conform to ISO 8601</a></li>
 </ul>
 </li>
-<li><a href="#data-formats">9. Data formats</a>
+<li><a href="#data-formats">10. Data formats</a>
 <ul class="sectlevel2">
 <li><a href="#167"><span class="must-keyword"><strong>MUST</strong></span> use JSON to encode structured data</a></li>
 <li><a href="#168"><span class="may-keyword"><strong>MAY</strong></span> use non JSON media types for binary data or alternative content representations</a></li>
@@ -1403,13 +1493,13 @@ a > code { background-color: #f0f0f0; padding: .1em .4em .1em .4em !important; f
 <li><a href="#171"><span class="must-keyword"><strong>MUST</strong></span> define format for number and integer types</a></li>
 </ul>
 </li>
-<li><a href="#common-data-types">10. Common data types</a>
+<li><a href="#common-data-types">11. Common data types</a>
 <ul class="sectlevel2">
 <li><a href="#173"><span class="must-keyword"><strong>MUST</strong></span> use the common money object</a></li>
 <li><a href="#174"><span class="must-keyword"><strong>MUST</strong></span> use common field names and semantics</a></li>
 </ul>
 </li>
-<li><a href="#api-naming">11. API naming</a>
+<li><a href="#api-naming">12. API naming</a>
 <ul class="sectlevel2">
 <li><a href="#223"><span class="must-keyword"><strong>MUST</strong></span>/<span class="should-keyword"><strong>SHOULD</strong></span> use functional naming schema</a></li>
 <li><a href="#224"><span class="must-keyword"><strong>MUST</strong></span> follow naming convention for hostnames</a></li>
@@ -1420,10 +1510,6 @@ a > code { background-color: #f0f0f0; padding: .1em .4em .1em .4em !important; f
 <li><a href="#135"><span class="should-keyword"><strong>SHOULD</strong></span> not use /api as base path</a></li>
 <li><a href="#136"><span class="must-keyword"><strong>MUST</strong></span> use normalized paths without empty path segments and trailing slashes</a></li>
 <li><a href="#137"><span class="must-keyword"><strong>MUST</strong></span> stick to conventional query parameters</a></li>
-</ul>
-</li>
-<li><a href="#resources">12. Resources</a>
-<ul class="sectlevel2">
 <li><a href="#138"><span class="must-keyword"><strong>MUST</strong></span> avoid actions — think about resources</a></li>
 <li><a href="#139"><span class="should-keyword"><strong>SHOULD</strong></span> model complete business processes</a></li>
 <li><a href="#140"><span class="should-keyword"><strong>SHOULD</strong></span> define <em>useful</em> resources</a></li>
@@ -1543,20 +1629,12 @@ a > code { background-color: #f0f0f0; padding: .1em .4em .1em .4em !important; f
 <li><a href="#dissertations">Dissertations</a></li>
 <li><a href="#books">Books</a></li>
 <li><a href="#blogs">Blogs</a></li>
-</ul>
-</li>
-<li><a href="#appendix-tooling">Appendix B: Tooling</a>
-<ul class="sectlevel2">
 <li><a href="#api-first-integrations">API first integrations</a></li>
 <li><a href="#support-libraries">Support libraries</a></li>
-</ul>
-</li>
-<li><a href="#appendix-best-practices">Appendix C: Best practices</a>
-<ul class="sectlevel2">
 <li><a href="#optimistic-locking">Optimistic locking in RESTful APIs</a></li>
 </ul>
 </li>
-<li><a href="#appendix-changelog">Appendix D: Changelog</a>
+<li><a href="#appendix-changelog">Appendix B: Changelog</a>
 <ul class="sectlevel2">
 <li><a href="#rule-changes">Rule Changes</a></li>
 </ul>
@@ -1566,7 +1644,13 @@ a > code { background-color: #f0f0f0; padding: .1em .4em .1em .4em !important; f
 </div>
 </div>
 <div class="sect1">
-<h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
+<h2 id="introduction"><a class="link" href="#introduction">1. THIS IS ONLY FOR GITHUB ACTIONS TEST 1</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introduction"><a class="link" href="#_introduction">2. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Zalando’s software architecture centers around decoupled microservices
@@ -1664,7 +1748,7 @@ current guidelines - for sake of overall consistency.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="principles"><a class="link" href="#principles">2. Principles</a></h2>
+<h2 id="principles"><a class="link" href="#principles">3. Principles</a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="api-design-principles"><a class="link" href="#api-design-principles">API design principles</a></h3>
@@ -1887,7 +1971,7 @@ internal reviews.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="general-guidelines"><a class="link" href="#general-guidelines">3. General guidelines</a></h2>
+<h2 id="general-guidelines"><a class="link" href="#general-guidelines">4. General guidelines</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The titles are marked with the corresponding labels: <span class="must-keyword"><strong>MUST</strong></span>,
@@ -2029,7 +2113,7 @@ to include a link to the API user manual into the API specification using the
 </div>
 </div>
 <div class="sect1">
-<h2 id="meta-information"><a class="link" href="#meta-information">4. Meta information</a></h2>
+<h2 id="meta-information"><a class="link" href="#meta-information">5. Meta information</a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="218"><a class="link" href="#218"><span class="must-keyword"><strong>MUST</strong></span> contain API meta information</a></h3>
@@ -2272,7 +2356,7 @@ API Audience narrative (internal link)</a>.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="security"><a class="link" href="#security">5. Security</a></h2>
+<h2 id="security"><a class="link" href="#security">6. Security</a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="104"><a class="link" href="#104"><span class="must-keyword"><strong>MUST</strong></span> secure endpoints with OAuth 2.0</a></h3>
@@ -2438,7 +2522,7 @@ permission names in APIs must conform to the following naming pattern:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="compatibility"><a class="link" href="#compatibility">6. Compatibility</a></h2>
+<h2 id="compatibility"><a class="link" href="#compatibility">7. Compatibility</a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="106"><a class="link" href="#106"><span class="must-keyword"><strong>MUST</strong></span> not break backward compatibility</a></h3>
@@ -2899,7 +2983,7 @@ media type versioning and content negotiation (see above).</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="deprecation"><a class="link" href="#deprecation">7. Deprecation</a></h2>
+<h2 id="deprecation"><a class="link" href="#deprecation">8. Deprecation</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Sometimes it is necessary to phase out an API endpoint, an API version, or an
@@ -3020,7 +3104,7 @@ the deprecation info (see hint in <a href="#189"><span class="should-keyword"><s
 </div>
 </div>
 <div class="sect1">
-<h2 id="json-guidelines"><a class="link" href="#json-guidelines">8. JSON guidelines</a></h2>
+<h2 id="json-guidelines"><a class="link" href="#json-guidelines">9. JSON guidelines</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>These guidelines provides recommendations for defining JSON data at Zalando.
@@ -3322,7 +3406,7 @@ be strings formatted as recommended by <a href="https://en.wikipedia.org/wiki/IS
 </div>
 </div>
 <div class="sect1">
-<h2 id="data-formats"><a class="link" href="#data-formats">9. Data formats</a></h2>
+<h2 id="data-formats"><a class="link" href="#data-formats">10. Data formats</a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="167"><a class="link" href="#167"><span class="must-keyword"><strong>MUST</strong></span> use JSON to encode structured data</a></h3>
@@ -3728,7 +3812,7 @@ specific language types in Java will translate to <code>BigDecimal</code> for
 </div>
 </div>
 <div class="sect1">
-<h2 id="common-data-types"><a class="link" href="#common-data-types">10. Common data types</a></h2>
+<h2 id="common-data-types"><a class="link" href="#common-data-types">11. Common data types</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Definitions of data objects that are good candidates for wider usage. Below you can find a list of common data types
@@ -4191,7 +4275,7 @@ and address types when modeling users and their addresses).</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="api-naming"><a class="link" href="#api-naming">11. API naming</a></h2>
+<h2 id="api-naming"><a class="link" href="#api-naming">12. API naming</a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="223"><a class="link" href="#223"><span class="must-keyword"><strong>MUST</strong></span>/<span class="should-keyword"><strong>SHOULD</strong></span> use functional naming schema</a></h3>
@@ -4452,15 +4536,13 @@ direction, and the applied query filters to recreate the collection. See
 <li>
 <p><a id="limit"></a><a href="#limit"><code>limit</code></a>: client suggested limit to restrict the number of entries on
 a page. See <a href="#pagination">Pagination</a> section below.</p>
+<div id="resources" class="paragraph">
+<p>= Resources</p>
+</div>
 </li>
 </ul>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="resources"><a class="link" href="#resources">12. Resources</a></h2>
-<div class="sectionbody">
 <div class="sect2">
 <h3 id="138"><a class="link" href="#138"><span class="must-keyword"><strong>MUST</strong></span> avoid actions — think about resources</a></h3>
 <div class="paragraph">
@@ -7539,7 +7621,7 @@ a request from a Business Partner hits the Zalando Platform.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sales channels are owned by retailers and represent a specific consumer segment
 being addressed with a specific product assortment that is offered via CFA
 retailer catalogs to consumers (see
-<a href="https://digital-experience.docs.zalando.net/glossary/glossary.html">fashion platform glossary (internal link)</a>)</p></td>
+<a href="https://digital-experience.docs.zalando.net/glossary/glossary.html">fashion platform glossary (internal link)</a>).</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">52b96501-0f8d-43e7-82aa-8a96fab134d7</p></td>
 </tr>
 <tr>
@@ -7549,7 +7631,7 @@ retailer catalogs to consumers (see
 customers via different frontend application types, for instance, mobile app
 or browser. Info should be passed-through as generic aspect&#8201;&#8212;&#8201;there are
 diverse concerns, e.g. pushing mobiles with specific coupons, that make use of
-it. Current range is mobile-app, browser, facebook-app, chat-app</p></td>
+it. Current range is mobile-app, browser, facebook-app, chat-app.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">mobile-app</p></td>
 </tr>
 <tr>
@@ -7588,6 +7670,27 @@ disables it in the settings for respective mobile platform.</p></td>
 <div class="paragraph">
 <p><strong>Exception:</strong> The only exception to this guideline are the conventional
 hop-by-hop <code>X-RateLimit-</code> headers which can be used as defined in <a href="#153"><span class="must-keyword"><strong>MUST</strong></span> use code 429 with headers for rate limits</a>.</p>
+</div>
+<div class="paragraph">
+<p>As part of the guidelines we sourced the OpenAPI definition of all proprietary headers;
+you can simply reference it when defining the API endpoint requests e.g.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">parameters</span>:
+- <span class="string"><span class="content">$ref: &quot;https://opensource.zalando.com/restful-api-guidelines/models/request-headers-1.0.0.yaml#/X-Flow-ID&quot;</span></span>
+- <span class="string"><span class="content">$ref: &quot;https://opensource.zalando.com/restful-api-guidelines/models/request-headers-1.0.0.yaml#/X-Tenant-ID&quot;</span></span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Response headers can be referenced in the API endpoint e.g.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="yaml"><span class="key">parameters</span>:
+- <span class="string"><span class="content">$ref: &quot;https://opensource.zalando.com/restful-api-guidelines/models/response-headers-1.0.0.yaml#/ETag&quot;</span></span>
+- <span class="string"><span class="content">$ref: &quot;https://opensource.zalando.com/restful-api-guidelines/models/response-headers-1.0.0.yaml#/Cache-Control&quot;</span></span></code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p><strong>Hint:</strong> This guideline does not standardize proprietary headers for
@@ -7823,7 +7926,7 @@ publish/subscribe broker for event producers and consumers.</p>
 in standing to a service’s REST API. Services publishing data for
 integration must treat their events as a first class design concern,
 just as they would an API. For example this means approaching events
-with the "API first" principle in mind as described in the <a href="#introduction">Introduction</a>.</p>
+with the "API first" principle in mind as described in the <a href="#introduction">THIS IS ONLY FOR GITHUB ACTIONS TEST 1</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -8677,7 +8780,7 @@ of event.</p>
 general.</p>
 </div>
 <div class="paragraph">
-<p>Everything expressed in the <a href="#introduction">Introduction</a> to
+<p>Everything expressed in the <a href="#introduction">THIS IS ONLY FOR GITHUB ACTIONS TEST 1</a> to
 these Guidelines is applicable to event data interchange between
 services. This is because our events, just like our APIs, represent a
 commitment to express what our systems do and designing high-quality,
@@ -9073,19 +9176,15 @@ Architectures</a>:</strong> This is the text which defines what REST is.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong><a href="http://restful-api-design.readthedocs.org/en/latest/">Lessons-learned blog: Thoughts on RESTful API Design</a></strong></p>
+<p><strong><a href="http://restful-api-design.readthedocs.org/en/latest/">Lessons-learned blog: Thoughts on RESTful API Design</a></strong>
+= Tooling</p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="appendix-tooling"><a class="link" href="#appendix-tooling">Appendix B: Tooling</a></h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p>This is not a part of the actual guidelines, but might be helpful for following them.
 Using a tool mentioned here doesn&#8217;t automatically ensure you follow the guidelines.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="api-first-integrations"><a class="link" href="#api-first-integrations">API first integrations</a></h3>
@@ -9155,24 +9254,22 @@ call tracing and log correlation in distributed systems</p>
 <li>
 <p><strong><a href="https://github.com/zalando/twintip-spring-web">TWINTIP Spring Integration</a>:</strong>
 API discovery endpoint for Spring Web MVC</p>
+<div id="appendix-best-practices" class="paragraph">
+<p>= Best practices</p>
+</div>
 </li>
 </ul>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="appendix-best-practices"><a class="link" href="#appendix-best-practices">Appendix C: Best practices</a></h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p>The best practices presented in this section are not part of the actual
 guidelines, but should provide guidance for common challenges we face when
 implementing RESTful APIs.</p>
 </div>
+</div>
 <div class="sect2">
 <h3 id="optimistic-locking"><a class="link" href="#optimistic-locking">Optimistic locking in RESTful APIs</a></h3>
 <div class="sect3">
-<h4 id="_introduction"><a class="link" href="#_introduction">Introduction</a></h4>
+<h4 id="_introduction_2"><a class="link" href="#_introduction_2">Introduction</a></h4>
 <div class="paragraph">
 <p>Optimistic locking might be used to avoid concurrent writes on the same entity,
 which might cause data loss. A client always has to retrieve a copy of an
@@ -9485,7 +9582,7 @@ not perfectly in sync, the locking could potentially fail</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="appendix-changelog"><a class="link" href="#appendix-changelog">Appendix D: Changelog</a></h2>
+<h2 id="appendix-changelog"><a class="link" href="#appendix-changelog">Appendix B: Changelog</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This change log only contains major changes made after October 2016.</p>
@@ -9718,97 +9815,8 @@ window.cookieconsent.initialise({
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-09-30 16:15:47 UTC
+Last updated 2021-01-08 11:32:39 UTC
 </div>
 </div>
-<style>
-/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
-pre.CodeRay{background:#f7f7f8}
-.CodeRay .line-numbers{border-right:1px solid currentColor;opacity:.35;padding:0 .5em 0 0}
-.CodeRay span.line-numbers{display:inline-block;margin-right:.75em}
-.CodeRay .line-numbers strong{color:#000}
-table.CodeRay{border-collapse:separate;border:0;margin-bottom:0;background:none}
-table.CodeRay td{vertical-align:top;line-height:inherit}
-table.CodeRay td.line-numbers{text-align:right}
-table.CodeRay td.code{padding:0 0 0 .75em}
-.CodeRay .debug{color:#fff !important;background:#000080 !important}
-.CodeRay .annotation{color:#007}
-.CodeRay .attribute-name{color:#000080}
-.CodeRay .attribute-value{color:#700}
-.CodeRay .binary{color:#509}
-.CodeRay .comment{color:#998;font-style:italic}
-.CodeRay .char{color:#04d}
-.CodeRay .char .content{color:#04d}
-.CodeRay .char .delimiter{color:#039}
-.CodeRay .class{color:#458;font-weight:bold}
-.CodeRay .complex{color:#a08}
-.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
-.CodeRay .color{color:#099}
-.CodeRay .class-variable{color:#369}
-.CodeRay .decorator{color:#b0b}
-.CodeRay .definition{color:#099}
-.CodeRay .delimiter{color:#000}
-.CodeRay .doc{color:#970}
-.CodeRay .doctype{color:#34b}
-.CodeRay .doc-string{color:#d42}
-.CodeRay .escape{color:#666}
-.CodeRay .entity{color:#800}
-.CodeRay .error{color:#808}
-.CodeRay .exception{color:inherit}
-.CodeRay .filename{color:#099}
-.CodeRay .function{color:#900;font-weight:bold}
-.CodeRay .global-variable{color:#008080}
-.CodeRay .hex{color:#058}
-.CodeRay .integer,.CodeRay .float{color:#099}
-.CodeRay .include{color:#555}
-.CodeRay .inline{color:#000}
-.CodeRay .inline .inline{background:#ccc}
-.CodeRay .inline .inline .inline{background:#bbb}
-.CodeRay .inline .inline-delimiter{color:#d14}
-.CodeRay .inline-delimiter{color:#d14}
-.CodeRay .important{color:#555;font-weight:bold}
-.CodeRay .interpreted{color:#b2b}
-.CodeRay .instance-variable{color:#008080}
-.CodeRay .label{color:#970}
-.CodeRay .local-variable{color:#963}
-.CodeRay .octal{color:#40e}
-.CodeRay .predefined{color:#369}
-.CodeRay .preprocessor{color:#579}
-.CodeRay .pseudo-class{color:#555}
-.CodeRay .directive{font-weight:bold}
-.CodeRay .type{font-weight:bold}
-.CodeRay .predefined-type{color:inherit}
-.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
-.CodeRay .key{color:#808}
-.CodeRay .key .delimiter{color:#606}
-.CodeRay .key .char{color:#80f}
-.CodeRay .value{color:#088}
-.CodeRay .regexp .delimiter{color:#808}
-.CodeRay .regexp .content{color:#808}
-.CodeRay .regexp .modifier{color:#808}
-.CodeRay .regexp .char{color:#d14}
-.CodeRay .regexp .function{color:#404;font-weight:bold}
-.CodeRay .string{color:#d20}
-.CodeRay .string .string .string{background:#ffd0d0}
-.CodeRay .string .content{color:#d14}
-.CodeRay .string .char{color:#d14}
-.CodeRay .string .delimiter{color:#d14}
-.CodeRay .shell{color:#d14}
-.CodeRay .shell .delimiter{color:#d14}
-.CodeRay .symbol{color:#990073}
-.CodeRay .symbol .content{color:#a60}
-.CodeRay .symbol .delimiter{color:#630}
-.CodeRay .tag{color:#008080}
-.CodeRay .tag-special{color:#d70}
-.CodeRay .variable{color:#036}
-.CodeRay .insert{background:#afa}
-.CodeRay .delete{background:#faa}
-.CodeRay .change{color:#aaf;background:#007}
-.CodeRay .head{color:#f8f;background:#505}
-.CodeRay .insert .insert{color:#080}
-.CodeRay .delete .delete{color:#800}
-.CodeRay .change .change{color:#66f}
-.CodeRay .head .head{color:#f4f}
-</style>
 </body>
 </html>
