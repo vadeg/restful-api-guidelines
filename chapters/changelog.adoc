@@ -4,6 +4,8 @@
 
 This change log only contains major changes made after October 2016.
 
+This is for test only 
+
 Non-major changes are editorial-only changes or minor changes of existing guidelines, e.g. adding new error code.
 Major changes are changes that come with additional obligations, or even change an existing guideline obligation.
 The latter changes are additionally labeled with "Rule Change" here.
