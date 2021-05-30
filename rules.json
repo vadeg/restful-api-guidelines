@@ -6,7 +6,7 @@
     },
     {
       "id": "#101",
-      "title": "MUST provide API specification using Open API"
+      "title": "MUST provide API specification using OpenAPI"
     },
     {
       "id": "#102",
@@ -34,7 +34,7 @@
     },
     {
       "id": "#108",
-      "title": "MUST prepare clients accept compatible API extensions"
+      "title": "MUST prepare clients to accept compatible API extensions"
     },
     {
       "id": "#109",
@@ -46,7 +46,7 @@
     },
     {
       "id": "#111",
-      "title": "MUST treat Open API specification as open for extension by default"
+      "title": "MUST treat OpenAPI specification as open for extension by default"
     },
     {
       "id": "#112",
@@ -90,7 +90,7 @@
     },
     {
       "id": "#125",
-      "title": "SHOULD represent enumerations as strings"
+      "title": "SHOULD declare enum values using UPPER_SNAKE_CASE string "
     },
     {
       "id": "#126",
@@ -114,7 +114,7 @@
     },
     {
       "id": "#132",
-      "title": "SHOULD prefer hyphenated-pascal-case for HTTP header fields"
+      "title": "SHOULD use uppercase separate words with hyphens for HTTP headers"
     },
     {
       "id": "#133",
@@ -254,11 +254,11 @@
     },
     {
       "id": "#167",
-      "title": "MUST use JSON to encode structured data"
+      "title": "MUST use JSON as payload data interchange format"
     },
     {
       "id": "#168",
-      "title": "MAY use non JSON media types for binary data or alternative content representations"
+      "title": "MAY pass non-JSON media types using data specific standard formats"
     },
     {
       "id": "#169",
@@ -274,7 +274,7 @@
     },
     {
       "id": "#172",
-      "title": "SHOULD prefer standard media type name `application/json`"
+      "title": "SHOULD use standard media types"
     },
     {
       "id": "#173",
@@ -286,7 +286,7 @@
     },
     {
       "id": "#176",
-      "title": "MUST use problem JSON"
+      "title": "MUST support problem JSON"
     },
     {
       "id": "#177",
@@ -350,7 +350,7 @@
     },
     {
       "id": "#192",
-      "title": "MUST publish Open API specification"
+      "title": "MUST publish OpenAPI specification"
     },
     {
       "id": "#193",
@@ -366,7 +366,7 @@
     },
     {
       "id": "#196",
-      "title": "MUST ensure event schema conforms to Open API schema object"
+      "title": "MUST ensure event schema conforms to OpenAPI schema object"
     },
     {
       "id": "#197",
@@ -394,7 +394,7 @@
     },
     {
       "id": "#203",
-      "title": "SHOULD provide means for explicit event ordering"
+      "title": "SHOULD provide explicit event ordering for general events"
     },
     {
       "id": "#204",
@@ -526,11 +526,15 @@
     },
     {
       "id": "#240",
-      "title": "SHOULD declare enum values using UPPER_SNAKE_CASE format"
+      "title": "SHOULD declare enum values using UPPER_SNAKE_CASE string "
     },
     {
       "id": "#241",
       "title": "MAY expose compound keys as resource identifiers"
+    },
+    {
+      "id": "#242",
+      "title": "MUST provide explicit event ordering for data change events"
     }
   ]
 }
