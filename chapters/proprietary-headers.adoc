@@ -4,7 +4,7 @@
 This section shares definitions of proprietary headers that should be
 named consistently because they address overarching service-related
 concerns. Whether services support these concerns or not is optional;
-therefore, the Open API API specification is the right place to make this
+therefore, the OpenAPI API specification is the right place to make this
 explicitly visible. Use the parameter definitions of the resource HTTP
 methods.
 
@@ -59,12 +59,12 @@ retailer catalogs to consumers (see
 https://digital-experience.docs.zalando.net/glossary/glossary.html[fashion platform glossary (internal link)]).
 |52b96501-0f8d-43e7-82aa-8a96fab134d7
 
-|[[c-frontend-type]]{X-Frontend-Type}|String|
+|[[x-frontend-type]]{X-Frontend-Type}|String|
 Consumer facing applications (CFAs) provide business experience to their
 customers via different frontend application types, for instance, mobile app
 or browser. Info should be passed-through as generic aspect -- there are
 diverse concerns, e.g. pushing mobiles with specific coupons, that make use of
-it. Current range is mobile-app, browser, facebook-app, chat-app.
+it. Current range is mobile-app, browser, facebook-app, chat-app, email.
 |mobile-app
 
 |[[x-device-type]]{X-Device-Type}|String|

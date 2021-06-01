@@ -1,9 +1,36 @@
 [[common-headers]]
-= Common headers
+[[standard-headers]]
+= Standard headers
 
-This section describes a handful of headers, which we found raised the most
+This section describes a handful of standard headers, which we found raising the most
 questions in our daily usage, or which are useful in particular circumstances
 but not widely known.
+
+
+[#133]
+== {MAY} use standardized headers
+
+Use http://en.wikipedia.org/wiki/List_of_HTTP_header_fields[this list] and
+explicitly mention its support in your OpenAPI definition.
+
+
+[#132]
+== {SHOULD} use uppercase separate words with hyphens for HTTP headers
+
+This convention is followed by most standard headers e.g. as defined in 
+{RFC-2616}[RFC 2616] and {RFC-4229}[RFC 4229]. Examples:
+
+[source,http]
+----
+If-Modified-Since
+Accept-Encoding
+Content-ID
+Language
+----
+
+Note, HTTP standard defines headers as case-insensitive ({RFC-7230}#page-22[RFC 7230, p.22]). 
+However, for sake of readability and consistency you should follow the convention when 
+using standard or proprietary headers. Exceptions are common abbreviations like `ID`. 
 
 
 [#178]
@@ -28,11 +55,18 @@ limited to:
 * {Content-Type} indicates the media type of the body content.
 
 
-[#133]
-== {MAY} use standardized headers
+[#180]
+== {SHOULD} use `Location` header instead of `Content-Location` header
 
-Use http://en.wikipedia.org/wiki/List_of_HTTP_header_fields[this list] and
-mention its support in your Open API definition.
+As the correct usage of {Content-Location} response header (see below) with respect 
+to caching and its method specific semantics is difficult, we _discourage_ the use 
+of {Content-Location}. 
+In most cases it is sufficient to inform clients about the resource location 
+in create or re-direct responses by using the {Location} header while avoiding  
+the {Content-Location} specific ambiguities and complexities.
+
+More details in RFC 7231 {RFC-7231}#section-7.1.2[7.1.2 Location],
+{RFC-7231}#section-3.1.4.2[3.1.4.2 Content-Location]
 
 
 [#179]
@@ -68,19 +102,6 @@ HTTP/1.1 200 OK
 Content-Type: image/png
 Content-Location: /products/123/images?format=raw
 ----
-
-
-[#180]
-== {SHOULD} use `Location` header instead of `Content-Location` header
-
-As the correct usage of {Content-Location} with respect to semantics and
-caching is difficult, we _discourage_ the use of {Content-Location}. In most
-cases it is sufficient to direct clients to the resource location by using
-the {Location} header instead without hitting the {Content-Location} specific
-ambiguities and complexities.
-
-More details in RFC 7231 {RFC-7231}#section-7.1.2[7.1.2 Location],
-{RFC-7231}#section-3.1.4.2[3.1.4.2 Content-Location]
 
 
 [#181]

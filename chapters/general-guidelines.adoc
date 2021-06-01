@@ -11,8 +11,8 @@ The titles are marked with the corresponding labels: {MUST},
 You must follow the <<api-first, API First Principle>>, more specifically: 
 
 * You must define APIs first, before coding its implementation, <<101, using
-  Open API as specification language>>
-* You must design your APIs consistently with this guidelines; use our
+  OpenAPI as specification language>>
+* You must design your APIs consistently with these guidelines; use our
   https://zally.zalando.net/[API Linter Service [internal link]] for automated
   rule checks. 
 * You must call for early review feedback from peers and client developers, 
@@ -22,12 +22,12 @@ You must follow the <<api-first, API First Principle>>, more specifically:
 
 
 [#101]
-== {MUST} provide API specification using Open API
+== {MUST} provide API specification using OpenAPI
 
-We use the http://swagger.io/specification/[Open API specification] as standard
+We use the http://swagger.io/specification/[OpenAPI specification] as standard
 to define API specification files. API designers are required to provide the API
 specification using a single *self-contained YAML* file to improve readability.
-We encourage to use *Open API 3.0* version, but still support *Open API 2.0*
+We encourage to use *OpenAPI 3.0* version, but still support *OpenAPI 2.0*
 (a.k.a. Swagger 2).
 
 The API specification files should be subject to version control using a source
@@ -38,8 +38,8 @@ API specification with the deployment of the implementing service, and, hence,
 make it discoverable for the group via our https://apis.zalando.net/[API Portal
 [internal link]].
 
-*Hint:* A good way to explore *Open API 3.0/2.0* is to navigate through the
-https://openapi-map.apihandyman.io/[Open API specification mind map] and use
+*Hint:* A good way to explore *OpenAPI 3.0/2.0* is to navigate through the
+https://openapi-map.apihandyman.io/[OpenAPI specification mind map] and use
 our https://plugins.jetbrains.com/search?search=swagger+Monte[Swagger Plugin
 for IntelliJ IDEA] to create your first API. To explore and validate/evaluate
 existing APIs the https://editor.swagger.io/[Swagger Editor] or our
@@ -67,11 +67,20 @@ The reason is, that the content referred to is _in general_ *not durable* and
 unexpected ways.
 
 However, you may use remote references to resources accessible by the following
-service URLs.
+service URLs:
 
-* `https://infrastructure-api-repository.zalandoapis.com/` (internal repository of APIs)
-* `https://opensource.zalando.com/problem/` (see <<176>>)
-* `https://zalando.github.io/problem/` (deprecated alias for <<176>>)
+* `https://infrastructure-api-repository.zalandoapis.com/` {dash} used to refer
+  to user defined, immutable API specification revisions published via the
+  internal API repository.
+* `https://opensource.zalando.com/restful-api-guidelines/{model.yaml}` {dash}
+  used to refer to guideline defined re-usable API fragments (see
+  `{model.yaml}` files in https://github.com/zalando/restful-api-guidelines/tree/master/models[restful-api-guidelines/models]
+  for details).
+
+*Hint:* The formerly used remote references to the `Problem` API fragment
+(aliases `https://opensource.zalando.com/problem/` and
+`https://zalando.github.io/problem/`) are deprecated, but still supported for
+compatibility (<<176>> on how to replace).
 
 As we control these URLs, we ensure that their content is *durable* and
 *immutable*. This allows to define API specifications by using fragments
